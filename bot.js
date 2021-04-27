@@ -47,7 +47,7 @@ function onMessageHandler(target, user, msg, self) {
     let splitedCommandName = commandName.split(' ')
     if (splitedCommandName[0] == '!cena' && (parseInt(splitedCommandName[1]) * 100 || !splitedCommandName[1])) {
         if(parseInt(splitedCommandName[1]) > 100000000 )
-          client.say(target, `@${author} to w chuj hajsu BloodTrail`)
+          return;
       else
         printCurrentDolarValue(target, splitedCommandName, author);
         
